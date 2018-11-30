@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IWorker.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="NoCommand.cs" />
+    <Compile Include="PreparePresentationCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkerA.cs" />
+    <Compile Include="WorkerB.cs" />
+    <Compile Include="WriteReportCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
