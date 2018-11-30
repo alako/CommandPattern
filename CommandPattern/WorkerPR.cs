@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class WorkerB:IWorker
+    class WorkerPR:IWorker,IWorkerPR
     {
         public void writeReport()
         {

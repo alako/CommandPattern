@@ -45,13 +45,16 @@
   <ItemGroup>
     <Compile Include="ICommand.cs" />
     <Compile Include="IWorker.cs" />
+    <Compile Include="IWorkerIT.cs" />
+    <Compile Include="IWorkerPR.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="NoCommand.cs" />
     <Compile Include="PreparePresentationCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkerA.cs" />
-    <Compile Include="WorkerB.cs" />
+    <Compile Include="WorkerIT.cs" />
+    <Compile Include="WorkerPR.cs" />
+    <Compile Include="WriteCodeCommand.cs" />
     <Compile Include="WriteReportCommand.cs" />
   </ItemGroup>
   <ItemGroup>

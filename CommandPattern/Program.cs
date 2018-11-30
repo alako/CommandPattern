@@ -11,21 +11,24 @@ namespace CommandPattern
         static void Main(string[] args)
         {
             Manager manager = new Manager();
-            WorkerA workerA = new WorkerA();
-            WorkerB workerB = new WorkerB();
-            WriteReportCommand writeReportCommandA = new WriteReportCommand(workerA);
-            WriteReportCommand writeReportCommandB = new WriteReportCommand(workerB);
-            PreparePresentationCommand preparePresentationCommandA = 
-                new PreparePresentationCommand(workerA);
-            PreparePresentationCommand preparePresentationCommandB =
-               new PreparePresentationCommand(workerB);
-            manager.setCommand(writeReportCommandA);
+            WorkerIT workerIT = new WorkerIT();
+            WorkerPR workerPR = new WorkerPR();
+
+            WriteReportCommand writeReportCommandIT = new WriteReportCommand(workerIT);
+            WriteReportCommand writeReportCommandPR = new WriteReportCommand(workerPR);
+
+            PreparePresentationCommand preparePresentationCommand =
+               new PreparePresentationCommand(workerPR);
+
+            WriteCodeCommand writeCodeCommand = new WriteCodeCommand(workerIT);
+
+            manager.setCommand(writeReportCommandIT);
             manager.orderCommand();
 
-            manager.setCommand(preparePresentationCommandB);
+            manager.setCommand(preparePresentationCommand);
             manager.orderCommand();
 
-            manager.setCommand(writeReportCommandB);
+            manager.setCommand(writeCodeCommand);
             manager.orderCommand();
 
             Console.ReadLine();

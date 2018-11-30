@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    interface IWorker
+    interface IWorkerPR
     {
-
-        void writeReport();
-      
+        void preparePresentation();
     }
 }

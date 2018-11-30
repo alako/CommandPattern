@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class WorkerA:IWorker
+    class WorkerIT: IWorker, IWorkerIT
     {
         public void writeReport()
         {
             Console.WriteLine("I am writing an awesome report!");
         }
-        public void preparePresentation()
+        public void writeCode()
         {
-            Console.WriteLine("I am preparing an awesome presentation!");
+            Console.WriteLine("I am preparing an awesome code!");
         }
     }
 }

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class PreparePresentationCommand:ICommand
+    class WriteCodeCommand: ICommand
     {
-        IWorkerPR worker;
-        public PreparePresentationCommand(IWorkerPR w)
+        WorkerIT worker;
+        public WriteCodeCommand(WorkerIT w)
         {
             worker = w;
         }
         public void Execute()
         {
-            worker.preparePresentation();
+            worker.writeCode();
         }
     }
 }
